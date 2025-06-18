@@ -28,10 +28,10 @@ const Footer = () => {
               <span className="font-semibold">Телефон экстренной связи</span>
             </div>
             <a
-              href="tel:+79991234567"
+              href="tel:+79518538242"
               className="text-2xl font-bold text-amber-400 hover:text-amber-300 transition-colors"
             >
-              +7 (999) 123-45-67
+              +7 (951) 853-82-42
             </a>
           </div>
 

@@ -18,13 +18,13 @@ const Header = () => {
               Профессиональная помощь в любое время суток
             </p>
             <a
-              href="tel:+79991234567"
+              href="tel:+79518538242"
               className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black px-8 py-4 rounded-lg text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <Phone size={24} />
               Вызвать комиссара 24/7
             </a>
-            <p className="text-sm text-slate-400 mt-2">+7 (999) 123-45-67</p>
+            <p className="text-sm text-slate-400 mt-2">+7 (951) 853-82-42</p>
           </div>
         </div>
       </div>
