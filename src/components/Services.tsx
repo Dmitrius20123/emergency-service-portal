@@ -9,6 +9,7 @@ import {
   Wrench,
   ClipboardCheck,
   Car,
+  DollarSign,
 } from "lucide-react";
 
 const Services = () => {
@@ -62,6 +63,11 @@ const Services = () => {
       icon: ClipboardCheck,
       title: "Помощь в постановке автомобиля на учет",
       description: "Содействие в регистрации ТС в ГИБДД",
+    },
+    {
+      icon: DollarSign,
+      title: "Выкуп автомобилей в любом состоянии",
+      description: "Быстрый выкуп даже с проблемными документами",
     },
   ];
 
