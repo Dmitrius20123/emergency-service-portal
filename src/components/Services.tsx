@@ -7,6 +7,7 @@ import {
   Eye,
   Scale,
   Wrench,
+  ClipboardCheck,
 } from "lucide-react";
 
 const Services = () => {
@@ -50,6 +51,11 @@ const Services = () => {
       icon: Wrench,
       title: "Ремонт автомобиля за счет страховой компании",
       description: "Организация качественного восстановления",
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Помощь в постановке автомобиля на учет",
+      description: "Содействие в регистрации ТС в ГИБДД",
     },
   ];
 
