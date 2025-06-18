@@ -6,9 +6,16 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-4 text-amber-400">
-              Единый Центр Помощи после ДТП
-            </h3>
+            <div className="flex flex-col items-center md:items-start gap-3 mb-4">
+              <img
+                src="https://cdn.poehali.dev/files/2baca7d5-4fc1-4cc9-a032-1fbef5bf2b93.jpg"
+                alt="Логотип ЕЦПП ДТП"
+                className="w-16 h-16 object-contain"
+              />
+              <h3 className="text-xl font-bold text-amber-400">
+                Единый Центр Помощи после ДТП
+              </h3>
+            </div>
             <p className="text-slate-300">
               Профессиональная помощь водителям в любое время суток. Мы работаем
               для вашей безопасности и спокойствия.
