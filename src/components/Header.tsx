@@ -1,4 +1,5 @@
-import { Phone } from "lucide-react";
+import { Phone, MessageSquare } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,14 +18,23 @@ const Header = () => {
             <p className="text-xl text-slate-300 mb-6">
               Профессиональная помощь в любое время суток
             </p>
-            <a
-              href="tel:+79518538242"
-              className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black px-8 py-4 rounded-lg text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              <Phone size={24} />
-              Вызвать комиссара 24/7
-            </a>
-            <p className="text-sm text-slate-400 mt-2">+7 (951) 853-82-42</p>
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
+              <a
+                href="tel:+79518538242"
+                className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black px-8 py-4 rounded-lg text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                <Phone size={24} />
+                Вызвать комиссара 24/7
+              </a>
+              <Link
+                to="/reviews"
+                className="inline-flex items-center gap-3 bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                <MessageSquare size={20} />
+                Отзывы клиентов
+              </Link>
+            </div>
+            <p className="text-sm text-slate-400">+7 (951) 853-82-42</p>
           </div>
         </div>
       </div>
