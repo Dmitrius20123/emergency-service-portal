@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { SEOConfig, targetRegions } from "@/lib/seo";
 
@@ -124,7 +125,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
 
       {/* Региональные бизнес-теги */}
       {targetRegions.map((region, index) => (
-        <div key={index}>
+        <React.Fragment key={index}>
           <meta
             name={`business:${region.code}:contact_phone`}
             content="+7 (951) 853-82-42"
@@ -142,7 +143,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
             content="круглосуточно"
           />
           <meta name={`geo:${region.code}:position`} content={region.coords} />
-        </div>
+        </React.Fragment>
       ))}
 
       {/* Canonical URL */}
@@ -191,7 +192,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
 
       {/* Business Open Graph для каждого региона */}
       {targetRegions.map((region, index) => (
-        <div key={index}>
+        <React.Fragment key={index}>
           <meta
             property={`business:region:${region.code}:name`}
             content={region.name}
@@ -204,7 +205,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
             property={`business:region:${region.code}:phone`}
             content="+7 (951) 853-82-42"
           />
-        </div>
+        </React.Fragment>
       ))}
 
       {/* Enhanced Twitter Card */}
@@ -239,11 +240,11 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
 
       {/* Региональная геолокация */}
       {targetRegions.map((region, index) => (
-        <div key={index}>
+        <React.Fragment key={index}>
           <meta name={`geo.region.${region.code}`} content={region.name} />
           <meta name={`geo.position.${region.code}`} content={region.coords} />
           <meta name={`ICBM.${region.code}`} content={region.coords} />
-        </div>
+        </React.Fragment>
       ))}
 
       {/* Dublin Core для каждого региона */}
