@@ -11,7 +11,14 @@ const Index = () => {
   const structuredData = [
     generateStructuredData("LocalBusiness", {
       url: "https://emergency-service-portal.poehali.dev",
-      sameAs: [],
+      sameAs: ["https://t.me/emergency_help_dtp", "https://wa.me/79518538242"],
+    }),
+    generateStructuredData("Organization", {}),
+    generateStructuredData("WebSite", {}),
+    generateStructuredData("Service", {
+      name: "Помощь при ДТП 24/7",
+      description:
+        "Круглосуточная экстренная помощь водителям при дорожно-транспортных происшествиях в Москве и области",
     }),
   ];
 
@@ -20,7 +27,7 @@ const Index = () => {
       <SEOHead config={seoConfig} structuredData={structuredData} />
       <div className="min-h-screen bg-slate-900">
         <Header />
-        <main>
+        <main role="main">
           <Services />
           <ReviewsForm />
         </main>
