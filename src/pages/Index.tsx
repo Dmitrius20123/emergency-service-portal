@@ -1,16 +1,32 @@
+import { HelmetProvider } from "react-helmet-async";
 import Header from "@/components/Header";
 import Services from "@/components/Services";
 import ReviewsForm from "@/components/ReviewsForm";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import { generatePageSEO, generateStructuredData } from "@/lib/seo";
 
 const Index = () => {
+  const seoConfig = generatePageSEO("home");
+  const structuredData = [
+    generateStructuredData("LocalBusiness", {
+      url: "https://emergency-service-portal.poehali.dev",
+      sameAs: [],
+    }),
+  ];
+
   return (
-    <div className="min-h-screen bg-slate-900">
-      <Header />
-      <Services />
-      <ReviewsForm />
-      <Footer />
-    </div>
+    <>
+      <SEOHead config={seoConfig} structuredData={structuredData} />
+      <div className="min-h-screen bg-slate-900">
+        <Header />
+        <main>
+          <Services />
+          <ReviewsForm />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
