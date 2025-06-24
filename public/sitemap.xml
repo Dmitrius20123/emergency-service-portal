@@ -15,17 +15,17 @@
     <mobile:mobile/>
     <image:image>
       <image:loc>https://cdn.poehali.dev/files/2baca7d5-4fc1-4cc9-a032-1fbef5bf2b93.jpg</image:loc>
-      <image:title>Независимая Автоэкспертиза в Москве</image:title>
-      <image:caption>Центр независимой автоэкспертизы и оценки ущерба после ДТП</image:caption>
+      <image:title>Вызвать Аварийного Комиссара 24/7</image:title>
+      <image:caption>Центр независимой автоэкспертизы и аварийного комиссара в регионах</image:caption>
     </image:image>
   </url>
   
-  <!-- Услуги автоэкспертизы -->
+  <!-- Услуги -->
   <url>
     <loc>https://emergency-service-portal.poehali.dev/services</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <mobile:mobile/>
   </url>
   
@@ -34,25 +34,79 @@
     <loc>https://emergency-service-portal.poehali.dev/expertise</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Региональные страницы - Воронеж -->
+  <url>
+    <loc>https://emergency-service-portal.poehali.dev/regions/voronezh</loc>
+    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
   </url>
   
-  <!-- Регионы обслуживания -->
+  <!-- Региональные страницы - Липецк -->
   <url>
-    <loc>https://emergency-service-portal.poehali.dev/regions</loc>
+    <loc>https://emergency-service-portal.poehali.dev/regions/lipetsk</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <mobile:mobile/>
   </url>
   
+  <!-- Региональные страницы - Курск -->
+  <url>
+    <loc>https://emergency-service-portal.poehali.dev/regions/kursk</loc>
+    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Региональные страницы - Брянск -->
+  <url>
+    <loc>https://emergency-service-portal.poehali.dev/regions/bryansk</loc>
+    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Региональные страницы - Ростов-на-Дону -->
+  <url>
+    <loc>https://emergency-service-portal.poehali.dev/regions/rostov-na-donu</loc>
+    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Региональные страницы - Краснодар -->
+  <url>
+    <loc>https://emergency-service-portal.poehali.dev/regions/krasnodar</loc>
+    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Региональные страницы - Саратов -->
+  <url>
+    <loc>https://emergency-service-portal.poehali.dev/regions/saratov</loc>
+    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
   <!-- Отзывы клиентов -->
   <url>
     <loc>https://emergency-service-portal.poehali.dev/reviews</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
     <mobile:mobile/>
   </url>
   
@@ -61,25 +115,7 @@
     <loc>https://emergency-service-portal.poehali.dev/contacts</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-  
-  <!-- О компании -->
-  <url>
-    <loc>https://emergency-service-portal.poehali.dev/about</loc>
-    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <mobile:mobile/>
-  </url>
-  
-  <!-- Часто задаваемые вопросы -->
-  <url>
-    <loc>https://emergency-service-portal.poehali.dev/faq</loc>
-    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
@@ -88,48 +124,41 @@
     <loc>https://emergency-service-portal.poehali.dev/calculator</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://emergency-service-portal.poehali.dev/faq</loc>
+    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
 
-  <!-- Региональные страницы МО -->
+  <!-- Специализированные страницы услуг -->
   <url>
-    <loc>https://emergency-service-portal.poehali.dev/regions/podolsk</loc>
+    <loc>https://emergency-service-portal.poehali.dev/services/emergency-commissioner</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <mobile:mobile/>
   </url>
-  
+
   <url>
-    <loc>https://emergency-service-portal.poehali.dev/regions/mytischi</loc>
+    <loc>https://emergency-service-portal.poehali.dev/services/auto-expertise</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <mobile:mobile/>
   </url>
-  
+
   <url>
-    <loc>https://emergency-service-portal.poehali.dev/regions/balashiha</loc>
+    <loc>https://emergency-service-portal.poehali.dev/services/court-expertise</loc>
     <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-  
-  <url>
-    <loc>https://emergency-service-portal.poehali.dev/regions/lyubertsy</loc>
-    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <mobile:mobile/>
-  </url>
-  
-  <url>
-    <loc>https://emergency-service-portal.poehali.dev/regions/himki</loc>
-    <lastmod>2025-01-24T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <mobile:mobile/>
   </url>
 

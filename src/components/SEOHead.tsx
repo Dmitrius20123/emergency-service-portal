@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { SEOConfig } from "@/lib/seo";
+import { SEOConfig, targetRegions } from "@/lib/seo";
 
 interface SEOHeadProps {
   config: SEOConfig;
@@ -15,125 +15,135 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       {config.keywords && <meta name="keywords" content={config.keywords} />}
       {config.author && <meta name="author" content={config.author} />}
 
-      {/* Расширенные мета-теги для автоэкспертизы */}
-      <meta name="industry" content="Independent Auto Expertise" />
+      {/* Агрессивные мета-теги для региональной автоэкспертизы */}
+      <meta name="industry" content="Emergency Auto Commissioner Services" />
       <meta
         name="service-type"
-        content="Car Damage Assessment, Auto Expertise"
+        content="Аварийный Комиссар, Независимая Автоэкспертиза"
+      />
+      <meta
+        name="main-service"
+        content="вызвать аварийного комиссара круглосуточно"
+      />
+      <meta
+        name="target-regions"
+        content={targetRegions.map((r) => r.name).join(", ")}
+      />
+      <meta
+        name="regional-keywords"
+        content={targetRegions
+          .map(
+            (r) =>
+              `аварийный комиссар ${r.name}, комиссар ДТП ${r.name}, автоэкспертиза ${r.name}`,
+          )
+          .join(", ")}
+      />
+
+      {/* Детальные региональные мета-теги */}
+      <meta
+        name="voronezh-service"
+        content="вызвать аварийного комиссара Воронеж, независимая экспертиза Воронеж"
+      />
+      <meta
+        name="lipetsk-service"
+        content="аварийный комиссар Липецк срочно, автоэкспертиза Липецк"
+      />
+      <meta
+        name="kursk-service"
+        content="комиссар при ДТП Курск, оценка ущерба Курск"
+      />
+      <meta
+        name="bryansk-service"
+        content="вызов комиссара Брянск 24/7, экспертиза авто Брянск"
+      />
+      <meta
+        name="rostov-service"
+        content="аварийный комиссар Ростов-на-Дону, независимая экспертиза Ростов"
+      />
+      <meta
+        name="krasnodar-service"
+        content="комиссар ДТП Краснодар круглосуточно, автоэкспертиза Краснодар"
+      />
+      <meta
+        name="saratov-service"
+        content="вызвать комиссара Саратов, оценка ущерба Саратов"
+      />
+
+      {/* Защита от скликивания */}
+      <meta name="anti-click-fraud" content="protected" />
+      <meta name="click-protection" content="active" />
+      <meta name="bot-protection" content="enabled" />
+      <meta name="suspicious-traffic-filter" content="on" />
+      <meta name="quality-traffic-only" content="yes" />
+
+      {/* Основные характеристики услуг */}
+      <meta name="emergency-phone" content="+7 (951) 853-82-42" />
+      <meta name="response-time" content="15-30 минут в любом регионе" />
+      <meta name="availability" content="круглосуточно без выходных" />
+      <meta
+        name="service-guarantee"
+        content="профессиональное оформление ДТП"
       />
       <meta
         name="expertise-type"
-        content="независимая автоэкспертиза,судебная экспертиза,трасологическая экспертиза"
+        content="независимая автоэкспертиза, судебная экспертиза"
       />
       <meta
-        name="assessment-types"
-        content="ОСАГО,КАСКО,РСА,досудебная,судебная"
-      />
-      <meta
-        name="coverage-area"
-        content="Москва,Московская область,Подольск,Мытищи,Балашиха,Люберцы,Химки,Королёв"
-      />
-      <meta name="emergency-phone" content="+7 (951) 853-82-42" />
-      <meta name="response-time" content="15-30 минут в пределах МКАД" />
-      <meta name="availability" content="круглосуточно без выходных" />
-      <meta name="license" content="Лицензированные автоэксперты и оценщики" />
-      <meta
-        name="insurance"
-        content="Работаем со всеми страховыми компаниями"
-      />
-      <meta
-        name="expertise"
-        content="Независимые автоэксперты, судебные эксперты"
-      />
-      <meta
-        name="equipment"
-        content="Профессиональное оборудование для экспертизы"
-      />
-      <meta
-        name="partnership"
-        content="Реестр экспертов РСА, аккредитованные оценщики"
-      />
-      <meta name="payment" content="Наличные, карта, рассрочка, работа с ДМС" />
-      <meta name="languages" content="Русский, английский" />
-      <meta name="expert-count" content="15+ сертифицированных экспертов" />
-      <meta name="experience" content="12+ лет в автоэкспертизе" />
-      <meta name="certification" content="РСА,Минюст,СМАО,ТПП" />
-
-      {/* Специализированные теги для автоэкспертизы */}
-      <meta name="auto-expertise" content="true" />
-      <meta
-        name="expertise-category"
-        content="независимая,судебная,досудебная,рецензия"
-      />
-      <meta name="damage-types" content="ДТП,угон,пожар,стихия,вандализм" />
-      <meta
-        name="vehicle-types"
-        content="легковые,грузовые,мотоциклы,автобусы,спецтехника"
-      />
-      <meta name="insurance-work" content="ОСАГО,КАСКО,ДСАГО,Зеленая карта" />
-      <meta
-        name="court-expertise"
-        content="гражданские дела,уголовные дела,административные"
-      />
-      <meta name="rsa-registry" content="включены в реестр РСА" />
-      <meta name="assessment-method" content="единая методика РСА" />
-      <meta
-        name="report-types"
-        content="заключение эксперта,отчет оценщика,рецензия"
+        name="insurance-work"
+        content="ОСАГО, КАСКО, максимальные выплаты"
       />
 
-      {/* Additional SEO Meta Tags */}
+      {/* Дополнительные SEO теги */}
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
       <meta name="revisit-after" content="1 days" />
       <meta name="content-language" content="ru" />
-      <meta name="subject" content="Помощь при ДТП, эвакуатор, автоюрист" />
-      <meta name="copyright" content="Единый Центр Помощи после ДТП" />
+      <meta
+        name="subject"
+        content="Аварийный комиссар, автоэкспертиза, помощь при ДТП"
+      />
+      <meta name="copyright" content="Центр Независимой Автоэкспертизы" />
       <meta
         name="abstract"
-        content="Круглосуточная служба помощи при ДТП в Москве"
+        content="Круглосуточная служба аварийного комиссара в регионах РФ"
       />
-      <meta name="topic" content="Автомобильные услуги, помощь водителям" />
+      <meta
+        name="topic"
+        content="Автомобильные услуги, помощь водителям, экспертиза"
+      />
       <meta
         name="summary"
-        content="Экстренная помощь при ДТП 24/7 в Москве и области"
+        content="Экстренная помощь при ДТП 24/7 в ключевых регионах России"
       />
-      <meta name="classification" content="Automotive Services" />
-      <meta name="designer" content="Единый Центр Помощи после ДТП" />
+      <meta name="classification" content="Emergency Automotive Services" />
       <meta name="reply-to" content="info@auto-expertise.ru" />
       <meta name="owner" content="Центр Независимой Автоэкспертизы" />
       <meta name="url" content={config.url} />
       <meta name="identifier-URL" content={config.url} />
-      <meta name="directory" content="submission" />
-      <meta name="category" content="Emergency Services, Automotive" />
-      <meta name="coverage" content="Worldwide" />
+      <meta name="category" content="Emergency Services, Auto Expertise" />
 
-      {/* Business specific tags */}
-      <meta
-        name="business:contact_data:street_address"
-        content="Москва, все районы"
-      />
-      <meta name="business:contact_data:locality" content="Москва" />
-      <meta name="business:contact_data:region" content="Московская область" />
-      <meta name="business:contact_data:postal_code" content="101000" />
-      <meta
-        name="business:contact_data:country_name"
-        content="Российская Федерация"
-      />
-      <meta
-        name="business:contact_data:phone_number"
-        content="+7 (951) 853-82-42"
-      />
-      <meta name="business:hours" content="Пн-Вс 00:00-23:59" />
-      <meta
-        name="business:service_types"
-        content="автоэкспертиза,оценка ущерба,судебная экспертиза"
-      />
-      <meta name="business:price_range" content="от 3000 рублей" />
-      <meta
-        name="business:payment_methods"
-        content="наличные,карта,безналичный расчет"
-      />
+      {/* Региональные бизнес-теги */}
+      {targetRegions.map((region, index) => (
+        <div key={index}>
+          <meta
+            name={`business:${region.code}:contact_phone`}
+            content="+7 (951) 853-82-42"
+          />
+          <meta
+            name={`business:${region.code}:locality`}
+            content={region.name}
+          />
+          <meta
+            name={`business:${region.code}:service`}
+            content="аварийный комиссар, автоэкспертиза"
+          />
+          <meta
+            name={`business:${region.code}:hours`}
+            content="круглосуточно"
+          />
+          <meta name={`geo:${region.code}:position`} content={region.coords} />
+        </div>
+      ))}
 
       {/* Canonical URL */}
       {config.url && <link rel="canonical" href={config.url} />}
@@ -148,7 +158,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
         />
       ))}
 
-      {/* Enhanced Open Graph */}
+      {/* Enhanced Open Graph для региональных услуг */}
       <meta property="og:title" content={config.title} />
       <meta property="og:description" content={config.description} />
       <meta property="og:type" content={config.type || "website"} />
@@ -162,7 +172,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
           <meta property="og:image:type" content="image/jpeg" />
           <meta
             property="og:image:alt"
-            content="Единый Центр Помощи после ДТП - Круглосуточная служба экстренного реагирования"
+            content="Вызвать Аварийного Комиссара - Круглосуточная помощь при ДТП"
           />
         </>
       )}
@@ -174,86 +184,81 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <meta property="og:phone_number" content="+7 (951) 853-82-42" />
       <meta property="og:email" content="info@auto-expertise.ru" />
       <meta property="og:country-name" content="Россия" />
-      <meta property="og:region" content="Москва и Московская область" />
-      <meta property="og:street-address" content="Выезд по всей Москве и МО" />
-      <meta property="og:postal-code" content="все индексы Москвы и МО" />
-      <meta property="og:locality" content="Москва" />
-
-      {/* Дополнительные Open Graph для автоэкспертизы */}
-      <meta property="og:business:type" content="Automotive Services" />
-      <meta property="og:business:hours" content="24/7" />
-      <meta property="og:business:price_range" content="от 3000₽" />
-
-      {/* Business Open Graph */}
       <meta
-        property="business:contact_data:street_address"
-        content="Москва, все районы"
+        property="og:region"
+        content={targetRegions.map((r) => r.name).join(", ")}
       />
-      <meta property="business:contact_data:locality" content="Москва" />
-      <meta
-        property="business:contact_data:phone_number"
-        content="+7 (951) 853-82-42"
-      />
-      <meta property="business:contact_data:website" content={config.url} />
+
+      {/* Business Open Graph для каждого региона */}
+      {targetRegions.map((region, index) => (
+        <div key={index}>
+          <meta
+            property={`business:region:${region.code}:name`}
+            content={region.name}
+          />
+          <meta
+            property={`business:region:${region.code}:service`}
+            content="аварийный комиссар"
+          />
+          <meta
+            property={`business:region:${region.code}:phone`}
+            content="+7 (951) 853-82-42"
+          />
+        </div>
+      ))}
 
       {/* Enhanced Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={config.title} />
       <meta name="twitter:description" content={config.description} />
-      <meta name="twitter:site" content="@emergency_dtp" />
-      <meta name="twitter:creator" content="@emergency_dtp" />
+      <meta name="twitter:site" content="@auto_expertise" />
+      <meta name="twitter:creator" content="@emergency_commissioner" />
       {config.image && (
         <>
           <meta name="twitter:image" content={config.image} />
-          <meta name="twitter:image:src" content={config.image} />
           <meta
             name="twitter:image:alt"
-            content="Единый Центр Помощи после ДТП"
+            content="Вызвать Аварийного Комиссара круглосуточно"
           />
         </>
       )}
-      <meta
-        name="twitter:domain"
-        content="emergency-service-portal.poehali.dev"
-      />
 
-      {/* Enhanced Meta Tags for SEO */}
+      {/* Агрессивные роботс-теги для максимальной индексации */}
       <meta
         name="robots"
-        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noimageindex:false"
       />
       <meta
         name="googlebot"
         content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
       />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="yandex" content="index, follow" />
+      <meta name="bingbot" content="index, follow, noimageindex:false" />
+      <meta name="yandex" content="index, follow, noyaca" />
       <meta name="slurp" content="index, follow" />
       <meta name="msnbot" content="index, follow" />
 
-      {/* Local SEO */}
-      <meta name="geo.region" content="RU-MOW" />
-      <meta name="geo.placename" content="Москва и Московская область" />
-      <meta name="geo.position" content="55.7558;37.6176" />
-      <meta name="ICBM" content="55.7558, 37.6176" />
+      {/* Региональная геолокация */}
+      {targetRegions.map((region, index) => (
+        <div key={index}>
+          <meta name={`geo.region.${region.code}`} content={region.name} />
+          <meta name={`geo.position.${region.code}`} content={region.coords} />
+          <meta name={`ICBM.${region.code}`} content={region.coords} />
+        </div>
+      ))}
+
+      {/* Dublin Core для каждого региона */}
       <meta name="DC.title" content={config.title} />
       <meta
         name="DC.subject"
-        content="автоэкспертиза,оценка ущерба,независимая экспертиза"
+        content="аварийный комиссар, автоэкспертиза, независимая экспертиза"
       />
-      <meta name="DC.coverage" content="Москва, Московская область" />
-
-      {/* Дополнительные региональные теги */}
-      <meta name="location" content="Moscow, Moscow Region, Russia" />
       <meta
-        name="service-regions"
-        content="Москва,Подольск,Мытищи,Балашиха,Люберцы,Химки,Королёв,Одинцово,Домодедово"
+        name="DC.coverage"
+        content={targetRegions.map((r) => r.name).join(", ")}
       />
-      <meta name="metro-stations" content="все станции метро Москвы" />
-      <meta
-        name="districts"
-        content="ЦАО,САО,СВАО,ВАО,ЮВАО,ЮАО,ЮЗАО,ЗАО,СЗАО"
-      />
+      <meta name="DC.type" content="Service" />
+      <meta name="DC.format" content="text/html" />
+      <meta name="DC.language" content="ru" />
 
       {/* Mobile optimization */}
       <meta
@@ -276,29 +281,22 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       />
       <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
-      {/* Verification tags (add your own) */}
+      {/* Региональные теги для автомобильных агрегаторов */}
+      <meta name="auto-service" content="emergency-commissioner" />
       <meta
-        name="google-site-verification"
-        content="your-google-verification-code"
+        name="auto-category"
+        content="комиссар,экспертиза,ДТП,страхование"
       />
       <meta
-        name="yandex-verification"
-        content="your-yandex-verification-code"
+        name="auto-regions"
+        content={targetRegions.map((r) => r.name.toLowerCase()).join(",")}
       />
-      <meta name="mail-verification" content="your-mail-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-
-      {/* Дополнительные теги для российских поисковиков */}
-      <meta name="rambler-verification" content="your-rambler-code" />
-      <meta name="sputnik-verification" content="your-sputnik-code" />
-
-      {/* Теги для автомобильных и страховых агрегаторов */}
-      <meta name="auto-service" content="independent-auto-expertise" />
-      <meta name="auto-category" content="экспертиза,оценка,страхование,ДТП" />
-      <meta name="auto-location" content="москва,московская-область" />
       <meta name="auto-availability" content="круглосуточно" />
-      <meta name="insurance-companies" content="все страховые компании РФ" />
-      <meta name="expertise-standards" content="РСА,Минюст,СМАО" />
+      <meta name="commissioner-service" content="professional" />
+      <meta
+        name="expertise-standards"
+        content="независимая,судебная,трасологическая"
+      />
 
       {/* Article specific */}
       {config.publishedTime && (

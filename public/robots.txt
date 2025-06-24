@@ -1,54 +1,77 @@
 
 # Robots.txt для Центра Независимой Автоэкспертизы
-# Оптимизированный для поисковых систем
+# Агрессивная оптимизация для региональных поисковых запросов
 
 User-agent: *
 Allow: /
-Allow: /reviews
-Allow: /services  
-Allow: /expertise
-Allow: /regions
-Allow: /contacts
-Allow: /about
-Allow: /faq
-Allow: /calculator
+Allow: /services/
+Allow: /expertise/
+Allow: /regions/
+Allow: /reviews/
+Allow: /contacts/
+Allow: /calculator/
+Allow: /faq/
+Allow: /about/
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
+Disallow: /private/
 Disallow: /*.json$
 Disallow: /temp/
 Disallow: /cache/
 Disallow: /*?utm_*
 Disallow: /*?fbclid=*
 Disallow: /*?gclid=*
+Disallow: /*?yclid=*
 
-# Специальные директивы для Яндекса
+# Специальные директивы для Яндекса (приоритет для РФ регионов)
 User-agent: Yandex
 Allow: /
-Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gclid&yclid
-Crawl-delay: 1
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gclid&yclid&_ga&_gid
+Crawl-delay: 0.5
 Host: emergency-service-portal.poehali.dev
 
 # Специальные директивы для Google
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0.5
 
-# Директивы для Bing
+# Директивы для Bing  
 User-agent: bingbot
 Allow: /
-Crawl-delay: 2
+Crawl-delay: 1
 
 # Директивы для Mail.ru
 User-agent: Mail.RU_Bot
 Allow: /
+Crawl-delay: 0.5
+
+# Директивы для российских поисковиков
+User-agent: SputnikBot
+Allow: /
 Crawl-delay: 1
 
-# Карты сайта
+User-agent: RamblerBot
+Allow: /
+Crawl-delay: 1
+
+# Защита от вредоносных ботов
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Карты сайта для максимальной индексации
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap.xml
-Sitemap: https://emergency-service-portal.poehali.dev/sitemap-services.xml
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap-regions.xml
+Sitemap: https://emergency-service-portal.poehali.dev/sitemap-services.xml
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap-news.xml
 
-# Основной хост
+# Основной хост для избежания дублирования
 Host: emergency-service-portal.poehali.dev

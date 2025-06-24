@@ -1,5 +1,6 @@
 import { Phone, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
+import { targetRegions } from "@/lib/seo";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
         <div className="flex flex-col items-center gap-4">
           <img
             src="https://cdn.poehali.dev/files/2baca7d5-4fc1-4cc9-a032-1fbef5bf2b93.jpg"
-            alt="Логотип ЕЦПП ДТП - Единый Центр Помощи после ДТП"
+            alt="Логотип Центра Независимой Автоэкспертизы - Аварийный Комиссар"
             className="w-24 h-24 object-contain"
             itemProp="logo"
           />
@@ -21,14 +22,25 @@ const Header = () => {
               className="text-4xl md:text-5xl font-bold mb-2 text-amber-400"
               itemProp="name"
             >
-              Единый Центр Помощи после ДТП
+              Центр Независимой Автоэкспертизы
             </h1>
             <p className="text-xl text-slate-300 mb-2" itemProp="description">
-              Профессиональная помощь водителям при ДТП в Москве и области 24/7
+              Аварийный комиссар и независимая автоэкспертиза 24/7
             </p>
+
+            {/* Региональный блок */}
+            <div className="text-lg text-amber-300 mb-4 font-semibold">
+              🏢 Работаем в городах:{" "}
+              {targetRegions
+                .slice(0, 4)
+                .map((r) => r.name)
+                .join(", ")}{" "}
+              и др.
+            </div>
+
             <p className="text-lg text-slate-400 mb-6">
-              ⚡ Выезд комиссара за 15 минут | 🛡️ Максимальные страховые выплаты
-              | 🚛 Эвакуатор круглосуточно
+              ⚡ Выезд аварийного комиссара за 15 минут | 🛡️ Максимальные
+              страховые выплаты | 🚛 Независимая экспертиза
             </p>
 
             <nav
@@ -39,10 +51,10 @@ const Header = () => {
                 href="tel:+79518538242"
                 className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black px-8 py-4 rounded-lg text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
                 itemProp="telephone"
-                aria-label="Вызвать комиссара по телефону"
+                aria-label="Вызвать аварийного комиссара по телефону"
               >
                 <Phone size={24} />
-                Вызвать комиссара 24/7
+                Вызвать Аварийного Комиссара
               </a>
               <Link
                 to="/reviews"
@@ -50,7 +62,7 @@ const Header = () => {
                 aria-label="Посмотреть отзывы клиентов"
               >
                 <MessageSquare size={20} />
-                Отзывы клиентов (250+)
+                Отзывы клиентов (2500+)
               </Link>
             </nav>
 
@@ -66,9 +78,15 @@ const Header = () => {
                 📞 +7 (951) 853-82-42
               </p>
               <div className="text-sm text-slate-400" itemProp="areaServed">
-                <p>🏢 Обслуживаем: Москва и Московская область</p>
+                <p>
+                  🏢 Обслуживаем: {targetRegions.map((r) => r.name).join(", ")}
+                </p>
                 <p>🕐 Время работы: Круглосуточно, без выходных</p>
-                <meta itemProp="contactType" content="customer service" />
+                <p>
+                  🚗 Услуги: Аварийный комиссар, автоэкспертиза, страховые
+                  выплаты
+                </p>
+                <meta itemProp="contactType" content="emergency service" />
                 <meta itemProp="availableLanguage" content="Russian" />
               </div>
             </div>
