@@ -1,29 +1,54 @@
-# Robots.txt для Единого Центра Помощи после ДТП
-# Полный доступ для всех поисковых систем
+
+# Robots.txt для Центра Независимой Автоэкспертизы
+# Оптимизированный для поисковых систем
 
 User-agent: *
 Allow: /
 Allow: /reviews
-Allow: /services
-Disallow: /admin
-Disallow: /private
-Disallow: /*.json$
+Allow: /services  
+Allow: /expertise
+Allow: /regions
+Allow: /contacts
+Allow: /about
+Allow: /faq
+Allow: /calculator
+Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
+Disallow: /*.json$
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
 
 # Специальные директивы для Яндекса
 User-agent: Yandex
 Allow: /
-Clean-param: utm_source&utm_medium&utm_campaign
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gclid&yclid
+Crawl-delay: 1
+Host: emergency-service-portal.poehali.dev
 
 # Специальные директивы для Google
 User-agent: Googlebot
 Allow: /
-Allow: /reviews
 Crawl-delay: 1
 
-# Карта сайта
+# Директивы для Bing
+User-agent: bingbot
+Allow: /
+Crawl-delay: 2
+
+# Директивы для Mail.ru
+User-agent: Mail.RU_Bot
+Allow: /
+Crawl-delay: 1
+
+# Карты сайта
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap.xml
+Sitemap: https://emergency-service-portal.poehali.dev/sitemap-services.xml
+Sitemap: https://emergency-service-portal.poehali.dev/sitemap-regions.xml
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap-news.xml
 
-# Дополнительная информация
+# Основной хост
 Host: emergency-service-portal.poehali.dev

@@ -15,35 +15,72 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       {config.keywords && <meta name="keywords" content={config.keywords} />}
       {config.author && <meta name="author" content={config.author} />}
 
-      {/* Расширенные мета-теги для автомобильных услуг */}
-      <meta name="industry" content="Automotive Services" />
-      <meta name="service-type" content="Emergency Road Assistance" />
-      <meta name="coverage-area" content="Moscow, Moscow Region" />
-      <meta name="emergency-phone" content="+7 (951) 853-82-42" />
-      <meta name="response-time" content="15-30 minutes" />
-      <meta name="availability" content="24/7" />
-      <meta name="license" content="Licensed Emergency Service Provider" />
-      <meta name="insurance" content="Fully Insured Operations" />
-      <meta name="expertise" content="Traffic Accident Specialists" />
-      <meta name="equipment" content="Professional Tow Trucks, Mobile Office" />
-      <meta name="partnership" content="GIBDD Authorized Service" />
-      <meta name="payment" content="Cash, Card, Insurance Direct Payment" />
-      <meta name="languages" content="Russian, English" />
-      <meta name="fleet-size" content="15+ Emergency Vehicles" />
-      <meta name="experience" content="10+ Years in Emergency Services" />
-
-      {/* Специализированные теги для экстренных служб */}
-      <meta name="emergency-service" content="true" />
-      <meta name="emergency-type" content="road-assistance" />
-      <meta name="service-category" content="automotive,emergency,insurance" />
+      {/* Расширенные мета-теги для автоэкспертизы */}
+      <meta name="industry" content="Independent Auto Expertise" />
       <meta
-        name="target-audience"
-        content="drivers,car-owners,fleet-managers"
+        name="service-type"
+        content="Car Damage Assessment, Auto Expertise"
       />
-      <meta name="service-quality" content="premium" />
-      <meta name="certification" content="GIBDD-approved,insurance-licensed" />
-      <meta name="mobile-service" content="yes" />
-      <meta name="emergency-response" content="immediate" />
+      <meta
+        name="expertise-type"
+        content="независимая автоэкспертиза,судебная экспертиза,трасологическая экспертиза"
+      />
+      <meta
+        name="assessment-types"
+        content="ОСАГО,КАСКО,РСА,досудебная,судебная"
+      />
+      <meta
+        name="coverage-area"
+        content="Москва,Московская область,Подольск,Мытищи,Балашиха,Люберцы,Химки,Королёв"
+      />
+      <meta name="emergency-phone" content="+7 (951) 853-82-42" />
+      <meta name="response-time" content="15-30 минут в пределах МКАД" />
+      <meta name="availability" content="круглосуточно без выходных" />
+      <meta name="license" content="Лицензированные автоэксперты и оценщики" />
+      <meta
+        name="insurance"
+        content="Работаем со всеми страховыми компаниями"
+      />
+      <meta
+        name="expertise"
+        content="Независимые автоэксперты, судебные эксперты"
+      />
+      <meta
+        name="equipment"
+        content="Профессиональное оборудование для экспертизы"
+      />
+      <meta
+        name="partnership"
+        content="Реестр экспертов РСА, аккредитованные оценщики"
+      />
+      <meta name="payment" content="Наличные, карта, рассрочка, работа с ДМС" />
+      <meta name="languages" content="Русский, английский" />
+      <meta name="expert-count" content="15+ сертифицированных экспертов" />
+      <meta name="experience" content="12+ лет в автоэкспертизе" />
+      <meta name="certification" content="РСА,Минюст,СМАО,ТПП" />
+
+      {/* Специализированные теги для автоэкспертизы */}
+      <meta name="auto-expertise" content="true" />
+      <meta
+        name="expertise-category"
+        content="независимая,судебная,досудебная,рецензия"
+      />
+      <meta name="damage-types" content="ДТП,угон,пожар,стихия,вандализм" />
+      <meta
+        name="vehicle-types"
+        content="легковые,грузовые,мотоциклы,автобусы,спецтехника"
+      />
+      <meta name="insurance-work" content="ОСАГО,КАСКО,ДСАГО,Зеленая карта" />
+      <meta
+        name="court-expertise"
+        content="гражданские дела,уголовные дела,административные"
+      />
+      <meta name="rsa-registry" content="включены в реестр РСА" />
+      <meta name="assessment-method" content="единая методика РСА" />
+      <meta
+        name="report-types"
+        content="заключение эксперта,отчет оценщика,рецензия"
+      />
 
       {/* Additional SEO Meta Tags */}
       <meta name="distribution" content="global" />
@@ -63,8 +100,8 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       />
       <meta name="classification" content="Automotive Services" />
       <meta name="designer" content="Единый Центр Помощи после ДТП" />
-      <meta name="reply-to" content="info@emergency-help.ru" />
-      <meta name="owner" content="Единый Центр Помощи после ДТП" />
+      <meta name="reply-to" content="info@auto-expertise.ru" />
+      <meta name="owner" content="Центр Независимой Автоэкспертизы" />
       <meta name="url" content={config.url} />
       <meta name="identifier-URL" content={config.url} />
       <meta name="directory" content="submission" />
@@ -72,16 +109,31 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <meta name="coverage" content="Worldwide" />
 
       {/* Business specific tags */}
-      <meta name="business:contact_data:street_address" content="Москва, ЦАО" />
+      <meta
+        name="business:contact_data:street_address"
+        content="Москва, все районы"
+      />
       <meta name="business:contact_data:locality" content="Москва" />
       <meta name="business:contact_data:region" content="Московская область" />
       <meta name="business:contact_data:postal_code" content="101000" />
-      <meta name="business:contact_data:country_name" content="Россия" />
+      <meta
+        name="business:contact_data:country_name"
+        content="Российская Федерация"
+      />
       <meta
         name="business:contact_data:phone_number"
         content="+7 (951) 853-82-42"
       />
-      <meta name="business:hours" content="Mo-Su 00:00-23:59" />
+      <meta name="business:hours" content="Пн-Вс 00:00-23:59" />
+      <meta
+        name="business:service_types"
+        content="автоэкспертиза,оценка ущерба,судебная экспертиза"
+      />
+      <meta name="business:price_range" content="от 3000 рублей" />
+      <meta
+        name="business:payment_methods"
+        content="наличные,карта,безналичный расчет"
+      />
 
       {/* Canonical URL */}
       {config.url && <link rel="canonical" href={config.url} />}
@@ -115,16 +167,27 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
         </>
       )}
       <meta property="og:locale" content="ru_RU" />
-      <meta property="og:site_name" content="Единый Центр Помощи после ДТП" />
+      <meta
+        property="og:site_name"
+        content="Центр Независимой Автоэкспертизы"
+      />
       <meta property="og:phone_number" content="+7 (951) 853-82-42" />
-      <meta property="og:email" content="info@emergency-help.ru" />
-      <meta property="og:country-name" content="Russia" />
-      <meta property="og:region" content="Moscow" />
+      <meta property="og:email" content="info@auto-expertise.ru" />
+      <meta property="og:country-name" content="Россия" />
+      <meta property="og:region" content="Москва и Московская область" />
+      <meta property="og:street-address" content="Выезд по всей Москве и МО" />
+      <meta property="og:postal-code" content="все индексы Москвы и МО" />
+      <meta property="og:locality" content="Москва" />
+
+      {/* Дополнительные Open Graph для автоэкспертизы */}
+      <meta property="og:business:type" content="Automotive Services" />
+      <meta property="og:business:hours" content="24/7" />
+      <meta property="og:business:price_range" content="от 3000₽" />
 
       {/* Business Open Graph */}
       <meta
         property="business:contact_data:street_address"
-        content="Москва, ЦАО"
+        content="Москва, все районы"
       />
       <meta property="business:contact_data:locality" content="Москва" />
       <meta
@@ -170,17 +233,27 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
 
       {/* Local SEO */}
       <meta name="geo.region" content="RU-MOW" />
-      <meta name="geo.placename" content="Москва" />
+      <meta name="geo.placename" content="Москва и Московская область" />
       <meta name="geo.position" content="55.7558;37.6176" />
       <meta name="ICBM" content="55.7558, 37.6176" />
       <meta name="DC.title" content={config.title} />
+      <meta
+        name="DC.subject"
+        content="автоэкспертиза,оценка ущерба,независимая экспертиза"
+      />
+      <meta name="DC.coverage" content="Москва, Московская область" />
 
-      {/* Additional local SEO */}
-      <meta name="location" content="Moscow, Russia" />
-      <meta name="zipcode" content="101000" />
-      <meta name="city" content="Moscow" />
-      <meta name="state" content="Moscow Region" />
-      <meta name="country" content="Russia" />
+      {/* Дополнительные региональные теги */}
+      <meta name="location" content="Moscow, Moscow Region, Russia" />
+      <meta
+        name="service-regions"
+        content="Москва,Подольск,Мытищи,Балашиха,Люберцы,Химки,Королёв,Одинцово,Домодедово"
+      />
+      <meta name="metro-stations" content="все станции метро Москвы" />
+      <meta
+        name="districts"
+        content="ЦАО,САО,СВАО,ВАО,ЮВАО,ЮАО,ЮЗАО,ЗАО,СЗАО"
+      />
 
       {/* Mobile optimization */}
       <meta
@@ -219,11 +292,13 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <meta name="rambler-verification" content="your-rambler-code" />
       <meta name="sputnik-verification" content="your-sputnik-code" />
 
-      {/* Теги для автомобильных агрегаторов */}
-      <meta name="auto-service" content="emergency-road-assistance" />
-      <meta name="auto-category" content="emergency,towing,insurance" />
-      <meta name="auto-location" content="moscow,moscow-region" />
-      <meta name="auto-availability" content="24-7" />
+      {/* Теги для автомобильных и страховых агрегаторов */}
+      <meta name="auto-service" content="independent-auto-expertise" />
+      <meta name="auto-category" content="экспертиза,оценка,страхование,ДТП" />
+      <meta name="auto-location" content="москва,московская-область" />
+      <meta name="auto-availability" content="круглосуточно" />
+      <meta name="insurance-companies" content="все страховые компании РФ" />
+      <meta name="expertise-standards" content="РСА,Минюст,СМАО" />
 
       {/* Article specific */}
       {config.publishedTime && (
