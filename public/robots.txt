@@ -1,6 +1,6 @@
 
-# Robots.txt для Центра Независимой Автоэкспертизы
-# Агрессивная оптимизация для региональных поисковых запросов
+# Robots.txt для максимальной SEO оптимизации
+# Центр Независимой Автоэкспертизы - Аварийный Комиссар 24/7
 
 User-agent: *
 Allow: /
@@ -23,38 +23,32 @@ Disallow: /*?fbclid=*
 Disallow: /*?gclid=*
 Disallow: /*?yclid=*
 
-# Специальные директивы для Яндекса (приоритет для РФ регионов)
+# Специальные директивы для Яндекса (критично для РФ)
 User-agent: Yandex
 Allow: /
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gclid&yclid&_ga&_gid
-Crawl-delay: 0.5
+Crawl-delay: 0
 Host: emergency-service-portal.poehali.dev
 
 # Специальные директивы для Google
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0.5
+Crawl-delay: 0
 
-# Директивы для Bing  
-User-agent: bingbot
-Allow: /
-Crawl-delay: 1
-
-# Директивы для Mail.ru
+# Директивы для Mail.ru и других российских поисковиков
 User-agent: Mail.RU_Bot
 Allow: /
-Crawl-delay: 0.5
+Crawl-delay: 0
 
-# Директивы для российских поисковиков
 User-agent: SputnikBot
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0
 
 User-agent: RamblerBot
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0
 
-# Защита от вредоносных ботов
+# Полная блокировка SEO-ботов для защиты от конкурентов
 User-agent: AhrefsBot
 Disallow: /
 
@@ -67,11 +61,13 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Карты сайта для максимальной индексации
+User-agent: BLEXBot
+Disallow: /
+
+# Карты сайта для агрессивной индексации
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap.xml
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap-regions.xml
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap-services.xml
-Sitemap: https://emergency-service-portal.poehali.dev/sitemap-news.xml
 
-# Основной хост для избежания дублирования
+# Основной хост
 Host: emergency-service-portal.poehali.dev
