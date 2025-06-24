@@ -15,6 +15,36 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       {config.keywords && <meta name="keywords" content={config.keywords} />}
       {config.author && <meta name="author" content={config.author} />}
 
+      {/* Расширенные мета-теги для автомобильных услуг */}
+      <meta name="industry" content="Automotive Services" />
+      <meta name="service-type" content="Emergency Road Assistance" />
+      <meta name="coverage-area" content="Moscow, Moscow Region" />
+      <meta name="emergency-phone" content="+7 (951) 853-82-42" />
+      <meta name="response-time" content="15-30 minutes" />
+      <meta name="availability" content="24/7" />
+      <meta name="license" content="Licensed Emergency Service Provider" />
+      <meta name="insurance" content="Fully Insured Operations" />
+      <meta name="expertise" content="Traffic Accident Specialists" />
+      <meta name="equipment" content="Professional Tow Trucks, Mobile Office" />
+      <meta name="partnership" content="GIBDD Authorized Service" />
+      <meta name="payment" content="Cash, Card, Insurance Direct Payment" />
+      <meta name="languages" content="Russian, English" />
+      <meta name="fleet-size" content="15+ Emergency Vehicles" />
+      <meta name="experience" content="10+ Years in Emergency Services" />
+
+      {/* Специализированные теги для экстренных служб */}
+      <meta name="emergency-service" content="true" />
+      <meta name="emergency-type" content="road-assistance" />
+      <meta name="service-category" content="automotive,emergency,insurance" />
+      <meta
+        name="target-audience"
+        content="drivers,car-owners,fleet-managers"
+      />
+      <meta name="service-quality" content="premium" />
+      <meta name="certification" content="GIBDD-approved,insurance-licensed" />
+      <meta name="mobile-service" content="yes" />
+      <meta name="emergency-response" content="immediate" />
+
       {/* Additional SEO Meta Tags */}
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
@@ -182,6 +212,18 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
         name="yandex-verification"
         content="your-yandex-verification-code"
       />
+      <meta name="mail-verification" content="your-mail-verification-code" />
+      <meta name="msvalidate.01" content="your-bing-verification-code" />
+
+      {/* Дополнительные теги для российских поисковиков */}
+      <meta name="rambler-verification" content="your-rambler-code" />
+      <meta name="sputnik-verification" content="your-sputnik-code" />
+
+      {/* Теги для автомобильных агрегаторов */}
+      <meta name="auto-service" content="emergency-road-assistance" />
+      <meta name="auto-category" content="emergency,towing,insurance" />
+      <meta name="auto-location" content="moscow,moscow-region" />
+      <meta name="auto-availability" content="24-7" />
 
       {/* Article specific */}
       {config.publishedTime && (

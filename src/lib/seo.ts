@@ -301,6 +301,148 @@ export const generateFAQStructuredData = () => {
           text: "Для оформления ДТП необходимы: водительское удостоверение, ПТС или СТС, полис ОСАГО или КАСКО, паспорт. Наш комиссар поможет правильно оформить все документы.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Работаете ли вы с ГИБДД?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Да, наши комиссары имеют все необходимые лицензии и работают в тесном сотрудничестве с ГИБДД. Мы оформляем ДТП согласно всем требованиям законодательства РФ.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Какова стоимость ваших услуг?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Первичная консультация бесплатна. Стоимость услуг комиссара от 3000 рублей, эвакуатора от 2500 рублей. Окончательная цена зависит от сложности случая и расстояния.",
+        },
+      },
     ],
   });
+};
+
+// Структурированные данные для экстренных служб
+export const generateEmergencyServiceData = () => {
+  return generateStructuredData("EmergencyService", {
+    name: "Единый Центр Помощи после ДТП",
+    serviceType: "Emergency Road Assistance",
+    provider: {
+      "@type": "Organization",
+      name: "Единый Центр Помощи после ДТП",
+      legalName: "ООО Единый Центр Помощи",
+      telephone: "+7 (951) 853-82-42",
+      email: "info@emergency-help.ru",
+      url: "https://emergency-service-portal.poehali.dev",
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Москва",
+        containedInPlace: {
+          "@type": "Country",
+          name: "Россия",
+        },
+      },
+      {
+        "@type": "State",
+        name: "Московская область",
+        containedInPlace: {
+          "@type": "Country",
+          name: "Россия",
+        },
+      },
+    ],
+    availableChannel: [
+      {
+        "@type": "ServiceChannel",
+        servicePhone: "+7 (951) 853-82-42",
+        serviceType: "Emergency Phone",
+        availableLanguage: "Russian",
+      },
+      {
+        "@type": "ServiceChannel",
+        serviceUrl: "https://t.me/emergency_help_dtp",
+        serviceType: "Telegram Support",
+      },
+      {
+        "@type": "ServiceChannel",
+        serviceUrl: "https://wa.me/79518538242",
+        serviceType: "WhatsApp Support",
+      },
+    ],
+    hoursAvailable: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    ],
+    serviceOutput: [
+      {
+        "@type": "Service",
+        name: "Комиссар по ДТП",
+        description: "Выезд комиссара для оформления документов при ДТП",
+      },
+      {
+        "@type": "Service",
+        name: "Эвакуатор",
+        description: "Услуги эвакуации поврежденных автомобилей",
+      },
+      {
+        "@type": "Service",
+        name: "Независимая экспертиза",
+        description: "Оценка ущерба для максимальных выплат",
+      },
+    ],
+  });
+};
+
+// Дополнительные мета-теги для автомобильных услуг
+export const getAutomotiveMetaTags = () => {
+  return {
+    industry: "Automotive Services",
+    "service-type": "Emergency Road Assistance",
+    "coverage-area": "Moscow, Moscow Region",
+    "emergency-phone": "+7 (951) 853-82-42",
+    "response-time": "15-30 minutes",
+    availability: "24/7",
+    license: "Licensed Emergency Service Provider",
+    insurance: "Fully Insured Operations",
+    expertise: "Traffic Accident Specialists",
+    equipment: "Professional Tow Trucks, Mobile Office",
+    partnership: "GIBDD Authorized Service",
+    payment: "Cash, Card, Insurance Direct Payment",
+    languages: "Russian, English",
+    "fleet-size": "15+ Emergency Vehicles",
+    experience: "10+ Years in Emergency Services",
+  };
+};
+
+// Расширенная конфигурация для поисковых систем
+export const getSearchEngineConfig = () => {
+  return {
+    googlebot: {
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "crawl-delay": 1,
+    },
+    yandexbot: {
+      "clean-param": "utm_source&utm_medium&utm_campaign&fbclid&gclid",
+      "crawl-delay": 1,
+      host: "emergency-service-portal.poehali.dev",
+    },
+    bingbot: {
+      "crawl-delay": 2,
+    },
+  };
 };

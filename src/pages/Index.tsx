@@ -4,7 +4,12 @@ import Services from "@/components/Services";
 import ReviewsForm from "@/components/ReviewsForm";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { generatePageSEO, generateStructuredData } from "@/lib/seo";
+import {
+  generatePageSEO,
+  generateStructuredData,
+  generateFAQStructuredData,
+  generateEmergencyServiceData,
+} from "@/lib/seo";
 
 const Index = () => {
   const seoConfig = generatePageSEO("home");
@@ -20,6 +25,8 @@ const Index = () => {
       description:
         "Круглосуточная экстренная помощь водителям при дорожно-транспортных происшествиях в Москве и области",
     }),
+    generateFAQStructuredData(),
+    generateEmergencyServiceData(),
   ];
 
   return (
