@@ -1,30 +1,29 @@
 # Robots.txt для Единого Центра Помощи после ДТП
+# Полный доступ для всех поисковых систем
+
 User-agent: *
 Allow: /
 Allow: /reviews
-Allow: /services/*
+Allow: /services
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+Disallow: /api/
 
-# Специальные правила для поисковых ботов
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
+# Специальные директивы для Яндекса
 User-agent: Yandex
 Allow: /
-Crawl-delay: 2
+Clean-param: utm_source&utm_medium&utm_campaign
 
-User-agent: Bingbot
+# Специальные директивы для Google
+User-agent: Googlebot
 Allow: /
+Allow: /reviews
 Crawl-delay: 1
 
-# Запрещаем индексацию технических файлов
-Disallow: /api/
-Disallow: /*.json$
-Disallow: /admin/
-Disallow: /temp/
-
-# Sitemap
+# Карта сайта
 Sitemap: https://emergency-service-portal.poehali.dev/sitemap.xml
+Sitemap: https://emergency-service-portal.poehali.dev/sitemap-news.xml
 
-# Host (для Яндекса)
+# Дополнительная информация
 Host: emergency-service-portal.poehali.dev

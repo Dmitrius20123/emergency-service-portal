@@ -96,19 +96,46 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-16 bg-slate-800" aria-labelledby="services-heading">
+    <section
+      className="py-16 bg-slate-800"
+      aria-labelledby="services-heading"
+      itemScope
+      itemType="https://schema.org/OfferCatalog"
+    >
       <div className="container mx-auto px-4">
         <header className="text-center mb-12">
           <h2
             id="services-heading"
             className="text-3xl md:text-4xl font-bold text-white mb-4"
+            itemProp="name"
           >
-            Полный спектр услуг помощи при ДТП в Москве и области
+            🚨 Экстренная помощь при ДТП в Москве и области - Полный комплекс
+            услуг 24/7
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Профессиональная поддержка водителей 24/7: от оформления документов
-            до получения максимальных страховых выплат
+          <p
+            className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed"
+            itemProp="description"
+          >
+            ⚡{" "}
+            <strong>
+              Профессиональная служба помощи водителям круглосуточно:
+            </strong>{" "}
+            вызов комиссара за 15 минут, эвакуатор, автоюрист, независимая
+            экспертиза, максимальные страховые выплаты до 400 тыс. руб. по
+            ОСАГО/КАСКО
           </p>
+
+          {/* SEO текст */}
+          <div className="mt-6 text-sm text-slate-400 max-w-5xl mx-auto leading-relaxed">
+            <p>
+              <strong>Наша служба специализируется на:</strong> оформлении ДТП
+              по европротоколу, взыскании ущерба с виновника аварии, досудебном
+              урегулировании споров со страховыми компаниями, оценке скрытых
+              повреждений и УТС (утрата товарной стоимости), представительстве в
+              суде по автоспорам, техпомощи на дороге, доставке топлива,
+              кузовном ремонте и восстановлении геометрии автомобиля.
+            </p>
+          </div>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -131,11 +158,17 @@ const Services = () => {
                   {service.title}
                 </h3>
                 <p
-                  className="text-slate-300 text-sm leading-relaxed"
+                  className="text-slate-300 text-sm leading-relaxed mb-3"
                   itemProp="description"
                 >
                   {service.description}
                 </p>
+
+                {/* SEO keywords для каждой услуги */}
+                <div className="text-xs text-slate-500" itemProp="keywords">
+                  {service.keywords}
+                </div>
+
                 <meta
                   itemProp="provider"
                   content="Единый Центр Помощи после ДТП"
@@ -144,24 +177,62 @@ const Services = () => {
                   itemProp="areaServed"
                   content="Москва и Московская область"
                 />
+                <meta itemProp="availability" content="24/7" />
+                <meta itemProp="serviceType" content="Emergency Service" />
               </article>
             );
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-slate-300 text-lg mb-4">
-            🚨 <strong>Экстренная помощь при ДТП круглосуточно!</strong> Вызов
-            специалиста за 15 минут
+        {/* Расширенный блок CTA с SEO текстом */}
+        <div className="text-center mt-12 bg-slate-900 p-8 rounded-xl">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            🆘 Экстренная помощь при ДТП - Вызов комиссара круглосуточно!
+          </h3>
+          <p className="text-slate-300 text-lg mb-6 max-w-3xl mx-auto">
+            <strong>⏱️ Приезжаем за 15 минут в пределах МКАД!</strong>
+            <br />
+            Профессиональное оформление документов, работа со страховыми
+            компаниями, защита ваших интересов. Опыт работы более 10 лет, более
+            5000 успешно решенных дел.
           </p>
-          <a
-            href="tel:+79518538242"
-            className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg"
-            itemProp="telephone"
-          >
-            <Phone size={24} />
-            Вызвать комиссара: +7 (951) 853-82-42
-          </a>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <a
+              href="tel:+79518538242"
+              className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg"
+              itemProp="telephone"
+              title="Вызвать комиссара при ДТП круглосуточно"
+            >
+              <Phone size={24} />
+              📞 Вызвать комиссара: +7 (951) 853-82-42
+            </a>
+
+            <a
+              href="https://wa.me/79518538242"
+              className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+              title="Написать в WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 WhatsApp
+            </a>
+          </div>
+
+          {/* Дополнительная SEO информация */}
+          <div className="text-sm text-slate-400 max-w-4xl mx-auto">
+            <p className="mb-2">
+              <strong>🏆 Почему выбирают нас:</strong> Лицензированные эксперты,
+              сертифицированные оценщики, опытные автоюристы. Работаем с любыми
+              страховыми компаниями: РОСГОССТРАХ, ИНГОССТРАХ, СОГАЗ, ВСК,
+              РЕСО-Гарантия, АльфаСтрахование и др.
+            </p>
+            <p>
+              <strong>📍 Зона обслуживания:</strong> Москва (внутри МКАД - 15
+              мин, за МКАД - 30 мин), Московская область, Подмосковье (Балашиха,
+              Химки, Мытищи, Люберцы, Реутов, Королёв и др.)
+            </p>
+          </div>
         </div>
       </div>
     </section>
