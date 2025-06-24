@@ -22,7 +22,7 @@ const Header = () => {
               className="text-4xl md:text-5xl font-bold mb-2 text-amber-400"
               itemProp="name"
             >
-              Центр Независимой Автоэкспертизы
+              Единый Центр Помощи после ДТП
             </h1>
             <p className="text-xl text-slate-300 mb-2" itemProp="description">
               Аварийный комиссар и независимая автоэкспертиза 24/7

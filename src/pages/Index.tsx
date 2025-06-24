@@ -16,7 +16,7 @@ const Index = () => {
   const seoConfig = generatePageSEO("home");
   const structuredData = [
     generateStructuredData("LocalBusiness", {
-      name: "Центр Независимой Автоэкспертизы",
+      name: "Единый Центр Помощи после ДТП",
       description:
         "Круглосуточная служба аварийного комиссара и независимой автоэкспертизы в регионах: Воронеж, Липецк, Курск, Брянск, Ростов-на-Дону, Краснодар, Саратов. Профессиональное оформление ДТП, максимальные страховые выплаты.",
       url: "https://emergency-service-portal.poehali.dev",
@@ -56,7 +56,7 @@ const Index = () => {
       },
     }),
     generateStructuredData("Organization", {
-      name: "Центр Независимой Автоэкспертизы",
+      name: "Единый Центр Помощи после ДТП",
       legalName: "ООО Центр Независимой Автоэкспертизы",
       description: `Ведущий центр независимой автоэкспертизы и аварийных комиссаров в городах: ${targetRegions.map((r) => r.name).join(", ")}`,
     }),

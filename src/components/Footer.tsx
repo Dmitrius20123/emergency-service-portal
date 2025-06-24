@@ -19,7 +19,7 @@ const Footer = () => {
                 itemProp="logo"
               />
               <h3 className="text-xl font-bold text-amber-400" itemProp="name">
-                Центр Независимой Автоэкспертизы
+                Единый Центр Помощи после ДТП
               </h3>
             </div>
             <p className="text-slate-300 mb-4" itemProp="description">
