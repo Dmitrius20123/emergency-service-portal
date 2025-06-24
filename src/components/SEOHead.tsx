@@ -80,7 +80,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       />
       <meta
         name="google-site-verification"
-        content="emergency-auto-expertise-verification"
+        content="DNwsQo5vy44vAqzV-y5LpXPAJL99PCZpbzC8VrJKD6c"
       />
 
       {/* Дополнительные теги для местного SEO */}
