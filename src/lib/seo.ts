@@ -61,11 +61,31 @@ export const generateStructuredData = (type: string, params: any) => {
   };
 };
 
-export const generateFAQStructuredData = (faqs: any[]) => {
+export const generateFAQStructuredData = (faqs: any[] = []) => {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs,
+    mainEntity:
+      faqs.length > 0
+        ? faqs
+        : [
+            {
+              "@type": "Question",
+              name: "Как быстро приедет аварийный комиссар?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Наш аварийный комиссар приезжает в течение 15-30 минут в любом из регионов: Воронеж, Липецк, Курск, Брянск, Ростов-на-Дону, Краснодар, Саратов.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Сколько стоят услуги независимой автоэкспертизы?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Стоимость независимой автоэкспертизы зависит от сложности случая. Консультация бесплатная. Звоните +7 (951) 853-82-42.",
+              },
+            },
+          ],
   };
 };
 

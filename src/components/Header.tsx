@@ -43,52 +43,28 @@ const Header = () => {
               страховые выплаты | 🚛 Независимая экспертиза
             </p>
 
-            <nav
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
-              aria-label="Основная навигация"
-            >
+            <nav className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
                 href="tel:+79518538242"
-                className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black px-8 py-4 rounded-lg text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                className="flex items-center gap-2 bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
                 itemProp="telephone"
-                aria-label="Вызвать аварийного комиссара по телефону"
               >
-                <Phone size={24} />
-                Вызвать Аварийного Комиссара
+                <Phone size={20} />
+                +7 (951) 853-82-42
               </a>
-              <Link
-                to="/reviews"
-                className="inline-flex items-center gap-3 bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
-                aria-label="Посмотреть отзывы клиентов"
+              <a
+                href="https://t.me/emergency_help_dtp"
+                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <MessageSquare size={20} />
-                Отзывы клиентов (2500+)
-              </Link>
+                Telegram
+              </a>
             </nav>
 
-            <div
-              className="text-center space-y-2"
-              itemScope
-              itemType="https://schema.org/ContactPoint"
-            >
-              <p
-                className="text-lg font-semibold text-amber-400"
-                itemProp="telephone"
-              >
-                📞 +7 (951) 853-82-42
-              </p>
-              <div className="text-sm text-slate-400" itemProp="areaServed">
-                <p>
-                  🏢 Обслуживаем: {targetRegions.map((r) => r.name).join(", ")}
-                </p>
-                <p>🕐 Время работы: Круглосуточно, без выходных</p>
-                <p>
-                  🚗 Услуги: Аварийный комиссар, автоэкспертиза, страховые
-                  выплаты
-                </p>
-                <meta itemProp="contactType" content="emergency service" />
-                <meta itemProp="availableLanguage" content="Russian" />
-              </div>
+            <div className="text-sm text-slate-400">
+              ⏰ Круглосуточно без выходных | 🚀 Выезд за 15 минут
             </div>
           </div>
         </div>
