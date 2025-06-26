@@ -30,15 +30,15 @@ const generateRegionalKeywords = (region: string) => {
 
 export const defaultSEO: SEOConfig = {
   title:
-    "24/7 Федеральная Служба Экстренной Эвакуации - Круглосуточный Эвакуатор",
+    "Федеральная Служба Аварийных Комиссаров 24/7 - Экспертиза ДТП и Оценка Ущерба",
   description:
-    "Круглосуточная служба экстренной эвакуации автомобилей по всей России. Быстрая подача эвакуатора в течение 15 минут. Профессиональная транспортировка авто, мотоциклов, спецтехники. Работаем с ДТП, поломками, эвакуацией со штрафстоянок. ☎️ +7 (951) 853-82-42",
-  keywords: `экстренная эвакуация Воронеж, срочный эвакуатор Липецк, круглосуточная эвакуация Курск, эвакуатор при ДТП Брянск, служба эвакуации Ростов-на-Дону, быстрый эвакуатор Краснодар, эвакуация авто Саратов, ${targetRegions.map((r) => `эвакуатор ${r.name}, экстренная эвакуация ${r.name}, срочная подача эвакуатора ${r.name}`).join(", ")}, эвакуация со штрафстоянки ГИБДД, транспортировка неисправных авто, эвакуация мотоциклов`,
+    "Круглосуточная федеральная служба аварийных комиссаров для экспертизы ДТП, оценки ущерба и урегулирования страховых случаев. Выезд эксперта в течение 30 минут. Работаем со всеми страховыми компаниями. Независимая оценка повреждений. ☎️ +7 (951) 853-82-42",
+  keywords: `аварийный комиссар Воронеж, независимая экспертиза ДТП Липецк, оценка ущерба авто Курск, страховой эксперт Брянск, урегулирование ДТП Ростов-на-Дону, аварийные комиссары Краснодар, экспертиза после ДТП Саратов, ${targetRegions.map((r) => `аварийный комиссар ${r.name}, экспертиза ДТП ${r.name}, оценка ущерба ${r.name}`).join(", ")}, независимая автоэкспертиза, урегулирование страховых случаев, техническая экспертиза автомобилей`,
   image:
     "https://cdn.poehali.dev/files/340025d4-ad94-41c9-87ac-cf16e0457245.jpg",
   url: "https://emergency-service-portal.ru",
   type: "website",
-  author: "Федеральная Служба Экстренной Эвакуации 24/7",
+  author: "Федеральная Служба Аварийных Комиссаров 24/7",
   alternateLanguages: [
     { hreflang: "ru", href: "https://emergency-service-portal.ru" },
     {
@@ -57,9 +57,9 @@ export const generatePageSEO = (page: string): SEOConfig => {
       return {
         ...baseSEO,
         title:
-          "Экстренный Эвакуатор 24/7 - Срочная Эвакуация в Воронеже, Липецке, Курске | Федеральная Служба",
+          "Аварийный Комиссар 24/7 - Экспертиза ДТП в Воронеже, Липецке, Курске | Федеральная Служба",
         description:
-          "⚡ СРОЧНО вызвать эвакуатор! Федеральная служба экстренной эвакуации работает в 7 городах: Воронеж, Липецк, Курск, Брянск, Ростов-на-Дону, Краснодар, Саратов. Подача за 15 минут. Профессиональная транспортировка любых ТС. ☎️ +7 (951) 853-82-42",
+          "⚡ СРОЧНО вызвать аварийного комиссара! Федеральная служба экспертов работает в 7 городах: Воронеж, Липецк, Курск, Брянск, Ростов-на-Дону, Краснодар, Саратов. Выезд эксперта за 30 минут. Независимая оценка ущерба, экспертиза ДТП. ☎️ +7 (951) 853-82-42",
       };
     default:
       return baseSEO;
@@ -107,10 +107,10 @@ export const generateEmergencyServiceData = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://emergency-service-portal.ru/#business",
-    name: "Федеральная Служба Экстренной Эвакуации 24/7",
-    legalName: "ООО Федеральный Эвакуаторный Центр",
+    name: "Федеральная Служба Аварийных Комиссаров 24/7",
+    legalName: "ООО Федеральный Центр Автоэкспертизы",
     description:
-      "Круглосуточная федеральная служба экстренной эвакуации автомобилей и спецтехники в регионах: Воронеж, Липецк, Курск, Брянск, Ростов-на-Дону, Краснодар, Саратов",
+      "Круглосуточная федеральная служба аварийных комиссаров для экспертизы ДТП, независимой оценки ущерба и урегулирования страховых случаев в регионах: Воронеж, Липецк, Курск, Брянск, Ростов-на-Дону, Краснодар, Саратов",
     url: "https://emergency-service-portal.ru",
     telephone: "+79518538242",
     priceRange: "$$",
@@ -144,24 +144,24 @@ export const generateEmergencyServiceData = () => {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Услуги экстренной эвакуации и транспортировки",
+      name: "Услуги аварийных комиссаров и автоэкспертизы",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Экстренная эвакуация автомобилей",
+            name: "Экспертиза ДТП и оценка ущерба",
             description:
-              "Срочная подача эвакуатора при ДТП, поломках и других чрезвычайных ситуациях в течение 15 минут",
+              "Срочная независимая экспертиза дорожно-транспортных происшествий с выездом на место ДТП в течение 30 минут",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Профессиональная транспортировка техники",
+            name: "Урегулирование страховых случаев",
             description:
-              "Безопасная перевозка автомобилей, мотоциклов, спецтехники и грузовых автомобилей",
+              "Профессиональное сопровождение страховых случаев, взаимодействие со страховыми компаниями и защита интересов клиентов",
           },
         },
       ],
@@ -184,24 +184,24 @@ export const getCanonicalUrl = (path: string = "") => {
 // Мета-теги для защиты от скликивания и региональной оптимизации
 export const getRegionalMetaTags = () => {
   return {
-    industry: "Emergency Towing Services",
-    "service-type": "Emergency Towing, Vehicle Transportation",
+    industry: "Insurance Claim Services",
+    "service-type": "Auto Damage Assessment, Accident Investigation",
     "coverage-area": targetRegions.map((r) => r.name).join(", "),
     "emergency-phone": "+7 (951) 853-82-42",
-    "response-time": "15-30 минут",
+    "response-time": "30 минут",
     availability: "24/7",
     "target-regions": targetRegions.map((r) => r.name).join(","),
-    "main-keywords": "экстренная эвакуация, срочный эвакуатор",
+    "main-keywords": "аварийный комиссар, экспертиза ДТП",
     "anti-click-fraud": "protected",
     "regional-service": "multi-city",
     "service-quality": "premium",
-    expertise: "Professional Towing Specialists",
-    equipment: "Modern Tow Trucks and Transport Equipment",
-    partnership: "Insurance Companies and Roadside Assistance",
+    expertise: "Certified Insurance Claim Specialists",
+    equipment: "Professional Damage Assessment Tools",
+    partnership: "All Major Insurance Companies",
     payment: "Flexible Payment Options",
     languages: "Russian",
-    "expert-count": "25+ Certified Towing Specialists",
-    experience: "15+ Years Emergency Towing Experience",
+    "expert-count": "25+ Certified Auto Damage Assessors",
+    experience: "15+ Years Insurance Claim Experience",
   };
 };
 
