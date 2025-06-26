@@ -19,7 +19,7 @@ const Index = () => {
       name: "Единый Центр Помощи после ДТП",
       description:
         "Круглосуточная служба аварийного комиссара и независимой автоэкспертизы в регионах: Воронеж, Липецк, Курск, Брянск, Ростов-на-Дону, Краснодар, Саратов. Профессиональное оформление ДТП, максимальные страховые выплаты.",
-      url: "https://emergency-service-portal.poehali.dev",
+      url: "https://emergency-service-portal.ru",
       sameAs: ["https://t.me/emergency_help_dtp", "https://wa.me/79518538242"],
       hasOfferCatalog: {
         "@type": "OfferCatalog",

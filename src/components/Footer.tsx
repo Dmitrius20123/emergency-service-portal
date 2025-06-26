@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex flex-col items-center md:items-start gap-3 mb-4">
               <img
-                src="https://cdn.poehali.dev/files/2baca7d5-4fc1-4cc9-a032-1fbef5bf2b93.jpg"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&h=120&fit=crop&q=80"
                 alt="Логотип Центра Автоэкспертизы"
                 className="w-16 h-16 object-contain"
                 itemProp="logo"

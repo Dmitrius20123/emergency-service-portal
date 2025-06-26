@@ -12,7 +12,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-4">
           <img
-            src="https://cdn.poehali.dev/files/2baca7d5-4fc1-4cc9-a032-1fbef5bf2b93.jpg"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop&q=80"
             alt="Логотип Центра Независимой Автоэкспертизы - Аварийный Комиссар"
             className="w-24 h-24 object-contain"
             itemProp="logo"
