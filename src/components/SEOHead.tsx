@@ -16,20 +16,34 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <link rel="canonical" href={config.url} />
 
       {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg" />
+      <link
+        rel="icon"
+        type="image/x-icon"
+        href="https://cdn.poehali.dev/files/ed8b5f51-1a17-44b1-b676-5ebf107ee12a.jpg"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="https://cdn.poehali.dev/files/ed8b5f51-1a17-44b1-b676-5ebf107ee12a.jpg"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="https://cdn.poehali.dev/files/ed8b5f51-1a17-44b1-b676-5ebf107ee12a.jpg"
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
+        href="https://cdn.poehali.dev/files/ed8b5f51-1a17-44b1-b676-5ebf107ee12a.jpg"
       />
       <link
         rel="mask-icon"
-        href="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
-        color="#000000"
+        href="https://cdn.poehali.dev/files/ed8b5f51-1a17-44b1-b676-5ebf107ee12a.jpg"
+        color="#D4AF37"
       />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="theme-color" content="#D4AF37" />
 
       {/* Open Graph */}
       <meta property="og:title" content={config.title} />
@@ -41,7 +55,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <meta property="og:site_name" content="Единый Центр Помощи после ДТП" />
       <meta
         property="og:logo"
-        content="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
+        content="https://cdn.poehali.dev/files/ed8b5f51-1a17-44b1-b676-5ebf107ee12a.jpg"
       />
 
       {/* Twitter Card */}
@@ -51,7 +65,7 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <meta name="twitter:image" content={config.image} />
       <meta
         name="twitter:logo"
-        content="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
+        content="https://cdn.poehali.dev/files/ed8b5f51-1a17-44b1-b676-5ebf107ee12a.jpg"
       />
 
       {/* Критические SEO элементы */}
