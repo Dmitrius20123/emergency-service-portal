@@ -12,12 +12,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">
             <div className="flex flex-col items-center md:items-start gap-3 mb-4">
-              <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&h=120&fit=crop&q=80"
-                alt="Логотип Центра Автоэкспертизы"
-                className="w-16 h-16 object-contain"
-                itemProp="logo"
-              />
               <h3 className="text-xl font-bold text-amber-400" itemProp="name">
                 Единый Центр Помощи после ДТП
               </h3>

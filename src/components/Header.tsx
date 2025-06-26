@@ -11,12 +11,6 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-4">
-          <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop&q=80"
-            alt="Логотип Центра Независимой Автоэкспертизы - Аварийный Комиссар"
-            className="w-24 h-24 object-contain"
-            itemProp="logo"
-          />
           <div className="text-center">
             <h1
               className="text-4xl md:text-5xl font-bold mb-2 text-amber-400"
