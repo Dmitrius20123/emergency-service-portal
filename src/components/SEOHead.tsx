@@ -15,6 +15,14 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <meta name="keywords" content={config.keywords} />
       <link rel="canonical" href={config.url} />
 
+      {/* Favicon */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+      <link rel="mask-icon" href="/favicon.svg" color="#000000" />
+      <meta name="theme-color" content="#ffffff" />
+
       {/* Open Graph */}
       <meta property="og:title" content={config.title} />
       <meta property="og:description" content={config.description} />
