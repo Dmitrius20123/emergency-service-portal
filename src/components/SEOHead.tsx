@@ -19,8 +19,16 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
-      <link rel="mask-icon" href="/favicon.svg" color="#000000" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
+      />
+      <link
+        rel="mask-icon"
+        href="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
+        color="#000000"
+      />
       <meta name="theme-color" content="#ffffff" />
 
       {/* Open Graph */}
@@ -31,12 +39,20 @@ const SEOHead = ({ config, structuredData = [] }: SEOHeadProps) => {
       <meta property="og:type" content={config.type || "website"} />
       <meta property="og:locale" content="ru_RU" />
       <meta property="og:site_name" content="Единый Центр Помощи после ДТП" />
+      <meta
+        property="og:logo"
+        content="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
+      />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={config.title} />
       <meta name="twitter:description" content={config.description} />
       <meta name="twitter:image" content={config.image} />
+      <meta
+        name="twitter:logo"
+        content="https://cdn.poehali.dev/files/d9493eac-4708-4a78-8c3d-048df0308ba9.jpg"
+      />
 
       {/* Критические SEO элементы */}
       <meta
