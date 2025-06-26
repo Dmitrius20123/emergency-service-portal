@@ -37,6 +37,11 @@ const Footer = () => {
                 <MapPin size={16} />
                 <span>Работаем в регионах:</span>
               </div>
+              <p className="text-sm text-slate-300 mb-2">
+                Наша служба охватывает все крупные города и населенные пункты
+                региона. Независимо от вашего местоположения, мы быстро прибудем
+                на место ДТП и окажем профессиональную помощь 24/7.
+              </p>
               <div className="text-sm text-slate-300 ml-6">
                 {targetRegions.map((region, index) => (
                   <div key={index} className="mb-1">
