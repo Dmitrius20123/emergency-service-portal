@@ -40,7 +40,7 @@ const Footer = () => {
               <div className="text-sm text-slate-300 ml-6">
                 {targetRegions.map((region, index) => (
                   <div key={index} className="mb-1">
-                    📍 Воронеж ул. Краснодонская д. 31В{" "}
+                    📍 Липецк ул. Краснозаводская д.2г
                   </div>
                 ))}
               </div>
