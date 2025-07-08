@@ -28,7 +28,7 @@ User-agent: Yandex
 Allow: /
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gclid&yclid&_ga&_gid
 Crawl-delay: 0
-Host: emergency-service-portal.ru
+Host: emergency-service-portal.poehali.dev
 
 # Специальные директивы для Google
 User-agent: Googlebot
@@ -65,7 +65,9 @@ User-agent: BLEXBot
 Disallow: /
 
 # Карты сайта для агрессивной индексации
-Sitemap: https://emergency-service-portal.ru/sitemap.xml
+Sitemap: https://emergency-service-portal.poehali.dev/sitemap.xml
+Sitemap: https://emergency-service-portal.poehali.dev/sitemap-regions.xml
+Sitemap: https://emergency-service-portal.poehali.dev/sitemap-services.xml
 
 # Основной хост
-Host: emergency-service-portal.ru
+Host: emergency-service-portal.poehali.dev
